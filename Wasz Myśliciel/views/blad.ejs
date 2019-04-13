@@ -1,0 +1,90 @@
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="author" content="Jakub Marchut">
+        <title>WM</title>
+        <link rel="Stylesheet" type="text/css" href="/assets/css/loaders.css">
+        <link rel="Stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+        <link rel="Stylesheet" type="text/css" href="/assets/css/loaders.css">
+        <link rel="Stylesheet" type="text/css" href="/assets/css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="theme-color" content="#000000" />
+    </head>
+    <body>
+
+        <div id="overlay" class="loader">
+        <div class="loader-inner ball-grid-pulse">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+        <div id="container" style='background: url("/assets/img/landscape-2124022_1920.jpg");height: 100vh;background-size: cover;background-positiion:center;'>
+        <main >
+            <div class="container">
+                <div class="row">
+                    <article style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); background: #ffffff; padding: 30px;
+                    -webkit-box-shadow: 0px 0px 28px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 28px 5px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 28px 5px rgba(0,0,0,0.75);
+Copy Text
+                    ">
+                        <header>
+                            <h2>Wystąpił błąd</h2>
+                        </header>
+                        <p style="text-align: center; margin: 0; min-width: 250px;">
+                            Nie znaleziono takiej strony<br>
+                            <a href="/">Zabierz mnie do strony głównej</a>
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </main>
+
+        <footer style="position: absolute;bottom: 0; width: 100%">
+            <span class="logo">MWSKM</span> &copy; Wszelkie prawa zastrzeżone 2018
+        </footer>
+        </div>
+    </body>
+    <script>
+        (function() {
+            var menu = document.querySelector('nav'),
+                menulink = document.getElementsByClassName('hamburger')[0];
+
+                menulink.addEventListener('click', function(e) {
+                menu.classList.toggle('active');
+                menulink.classList.toggle('pressed');
+                e.preventDefault();
+            });
+        })();
+
+
+
+    </script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script>
+        var overlay = document.getElementById("overlay");
+
+window.addEventListener('load', function(){
+  overlay.style.display = 'none';
+})
+
+    </script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/day-night-modes.js"></script>
+    <script>check();</script>
+</html>

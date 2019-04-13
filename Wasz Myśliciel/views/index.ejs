@@ -1,0 +1,125 @@
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="author" content="Jakub Marchut">
+        <title>WM</title>
+        <link rel="Stylesheet" type="text/css" href="/assets/css/loaders.css">
+        <link rel="Stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+        <link rel="Stylesheet" type="text/css" href="/assets/css/loaders.css">
+        <link rel="Stylesheet" type="text/css" href="/assets/css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="theme-color" content="#000000" />
+    </head>
+    <body>
+
+        <div id="overlay" class="loader">
+        <div class="loader-inner ball-grid-pulse">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+        <div id="container">
+        <% include partials/nav.ejs %>
+        <div id="myModal" class="modal">
+            <button class="close"><i class="material-icons">close</i></button>
+            <input type="text" placeholder="Wpisz czego szukasz" />
+        </div>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <article class="col-sm-6 col-lg-4">
+                        <header>
+                            <h2><a href="a/zycie-to-kwestia-wyboru/">Życie to kwestia wyboru</a></h2>
+                        </header>
+                        <p>
+                            Aktualny trend poprawiania jakości życia polega na tym aby zwiększać wolność. Dzieje się tak dlatego, że wolność jest zakorzeniona w świadomości człowieka jako coś niezaprzeczalnie dobrego.
+                        </p>
+                    </article>
+                    <article class="col-sm-6 col-lg-4">
+                        <header>
+                            <h2><a href="a/paradoks-wartosci/">Paradoks wartości</a></h2>
+                        </header>
+                        Pewnego dnia Arystoteles zadał pytanie „Dlaczego woda, która jest niezbędna do życia jest tania a diamenty, bez których można się obejść, są drogie?”
+                    </article>
+                    <article class="col-sm-6 col-lg-4">
+                        <header>
+                            <h2><a href="a/obiektywizm/">Obiektywizm</a></h2>
+                        </header>
+                        Codziennie spotykamy się z różnymi sposobami postrzegania otaczającej nas rzeczywistości. Gdy znajdziemy się pomiędzy różnymi interpretacjami odnośnie wszystkiego co nas otacza, możemy dojść do wniosku, że nie istnieje jedna prawda
+                    </article>
+                    <article class="col-sm-6 col-lg-4">
+                        <header>
+                            <h2><a href="a/pokoj-na-swiecie/">Pokój na świecie</a></h2>
+                        </header>
+                        Biorąc pod uwagę historię naszej cywilizacji łatwo można zauważyć, że często dochodziło do mniejszych lub większych konfliktów na różnym tle.
+                    </article>
+                    <article class="col-sm-6 col-lg-4">
+                        <header>
+                            <h2><a href="a/praca/">Praca</a></h2>
+                        </header>
+                        Ludzie żyjący we wspólnocie tworzą pewne grupy. Już nasi przodkowie organizowali się w zespoły, które miały swoje potrzeby i realizując je pozwoliły wytworzyć pewne zachowania, nawyki.
+                    </article>
+                    <article class="col-sm-6 col-lg-4">
+                        <header>
+                            <h2><a href="a/spoleczenstwo/">Społeczeństwo</a></h2>
+                        </header>
+                        Jak już zapewne nie raz zauważyłem ludzie to zwierzęta stadne. Na co dzień przyzwyczajeni jesteśmy do tego, że nie jesteśmy sami. Dlaczego nie żyjemy na odludziu z najbliższa rodziną?
+                    </article>
+                </div>
+            </div>
+        </main>
+        </div>
+        <footer>
+            <span class="logo">MWSKM</span> &copy; Wszelkie prawa zastrzeżone 2018
+        </footer>
+        <div class="modal" id="modal">
+            <h1>Witaj</h1>
+            <button class="close"><i class="material-icons">close</i></button>
+            <p>Jeśli się tutaj znalazłaś/eś to istnieje ogromne prawdopodobieństwo, że się znaliśmy bądź znamy</p>
+            <p>Ta strona zawiera moje artykuły napisane o sprawach, rzeczach, mechanizmach, które zawsze mnie interesowały, których działanie nie dokońca rozumiałem. Są to sprawy związane z funkcjonowaniem społeczeństwa i tym w jaki sposób ludzie "widzą" świat.</p>
+            <input onchange="gettingRes()" id="donot" type="checkbox">Nie pokazuj ponowanie.
+            <p>Życzę Ci miłej lektury.</p>
+        </div>
+    </body>
+    <script>
+        (function() {
+            var menu = document.querySelector('nav'),
+                menulink = document.getElementsByClassName('hamburger')[0];
+
+                menulink.addEventListener('click', function(e) {
+                menu.classList.toggle('active');
+                menulink.classList.toggle('pressed');
+                e.preventDefault();
+            });
+        })();
+
+
+
+    </script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script>
+        var overlay = document.getElementById("overlay");
+
+window.addEventListener('load', function(){
+  overlay.style.display = 'none';
+})
+
+    </script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/day-night-modes.js"></script>
+    <script>check();</script>
+</html>

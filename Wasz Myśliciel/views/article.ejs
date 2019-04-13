@@ -1,0 +1,95 @@
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="author" content="Jakub Marchut">
+        <title><%= title.replace(/-/g," ") %></title>
+        <link rel="Stylesheet" type="text/css" href="/assets/css/loaders.css">
+        <link rel="Stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+        <link rel="Stylesheet" type="text/css" href="/assets/css/loaders.css">
+        <link rel="Stylesheet" type="text/css" href="/assets/css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            .articletitle   {
+                background-image: url(../../img/boy-447716_1920.jpg);
+                background-position: center top;
+            }
+            article {
+                margin: 2em 0 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="overlay" class="loader">
+        <div class="loader-inner ball-grid-pulse">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+        <div id="container">
+        <% include partials/nav.ejs %>
+        <div id="myModal" class="modal">
+            <button class="close"><i class="material-icons">close</i></button>
+            <input type="text" placeholder="Wpisz czego szukasz" />
+        </div>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <header class="col-sm-12 articletitle">
+                        <h1><%= title.replace(/-/g," ") %></h1>
+                    </header>
+                    <article class="col-sm-12">
+                        <p>Codziennie spotykamy się z różnymi sposobami postrzegania otaczającej nas rzeczywistości. Gdy znajdziemy się pomiędzy różnymi interpretacjami odnośnie wszystkiego co nas otacza, możemy dojść do wniosku, że nie istnieje jedna prawda, prawda, którą bezapelacyjnie wszyscy zaakceptują, prawda oczywista dla wszystkich, prawda, z którą pogodzą się wyznawcy różnych ideologii.</p>
+                        <p>Musimy zacząć od definicji prawdy, a więc prawdą jest to „co jest rzeczywiście, istnieje lub było”.
+                        Część osób twierdzi, że nie mam „prawdziwej” rzeczywistości a świat wypełniają opinie i interpretacje. Taki pogląd instynktownie odrzucamy, gdyż uznajemy, że np. 2+2=4 i nie ma tu miejsca na dyskusje czy osobiste tezy. Ten konkretny przypadek dotyczy nie do końca rzeczywistości a języka (matematyki), który tę rzeczywistość próbuje opisywać i aby sprawnie się nim posługiwać musimy zgodzić się z pewnymi założeniami, takimi, jak na przykład wyżej wspomniane równanie.
+                        Drugi pogląd przeciwnie do przedstawionego wyżej, nie zakłada, że wszystko jest relatywne tzn. warunkowe, zmienne. Uważa natomiast, że światem żądzą pewne absoluty, które definiują rzeczywistość, tak więc np. są rzeczy bezwarunkowo złe i dobre.</p>
+                        <p>Niestety, nie posiadam dostatecznej wiedzy aby wydać osąd na temat tak rozbudowanego i ciekawego zagadnienia, jednakże wiem, że ilu ludzi popatrzy na ten sam obraz, tyleż emocji on wzbudzi. I to jest prawdziwy potencjał, który należy wykorzystywać, bo gdyby udało się połączyć, analizować myśli każdego człowieka, to doszlibyśmy do ciekawych a może nawet rewolucyjnych wniosków. I warto przypomnieć, że wstydem nie jest posiadanie danych poglądów a niechęć do ich zmiany bądź refleksji nad nimi.</p>
+
+                    </article>
+                </div>
+            </div>
+        </main>
+        </div>
+        <footer>
+            <div id="txt"></div>
+            <span class="logo">MWSKM</span> &copy; Wszelkie prawa zastrzeżone 2018</footer>
+    </body>
+    <script>
+        (function() {
+            var menu = document.querySelector('nav'),
+                menulink = document.getElementsByClassName('hamburger')[0];
+
+                menulink.addEventListener('click', function(e) {
+                menu.classList.toggle('active');
+                menulink.classList.toggle('pressed');
+                e.preventDefault();
+            });
+        })();
+    </script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+	<script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/modals.js"></script>
+    <script src="../../js/day-night-modes.js"></script>
+
+    <script src="../../js/cookies.js"></script>
+    <script>
+          var overlay = document.getElementById("overlay");
+
+  window.addEventListener('load', function(){
+    overlay.style.display = 'none';
+  })
+
+      </script>
+</html>

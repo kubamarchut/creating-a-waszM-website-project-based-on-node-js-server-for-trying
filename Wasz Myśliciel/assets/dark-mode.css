@@ -1,0 +1,25 @@
+
+
+body {
+    color: #fff !important;
+    background-color: #151515 !important;
+}
+a {
+    color: #fff !important;
+}
+nav {
+    background-color: #00151f !important;
+}
+.hamburger .st{
+    background-color: #fff !important;
+}
+.modal{
+    background-color: #00151f !important;
+}
+.close{
+    color: #fff !important;
+}
+input {
+    background-color: #00151f;
+    color: #fff !important;
+}
